@@ -25,7 +25,7 @@ int main()
 
     // allocate 1 million int space
     start_t = clock();
-    std::vector<int> V(100000);
+    std::vector<int> V(1000000);
     end_t = clock();
     std::cout << (end_t - start_t) / (CLOCKS_PER_SEC * 60)
               << " minutes" << std::endl;
@@ -33,7 +33,7 @@ int main()
     // init data
     start_t = clock();
     std::default_random_engine generator(time(NULL));
-    std::uniform_int_distribution<int> distribution(1, 100000);
+    std::uniform_int_distribution<int> distribution(1, 1000000);
     for (size_t i = 0; i < V.size(); ++i)
         V[i] = distribution(generator);
     end_t = clock();
